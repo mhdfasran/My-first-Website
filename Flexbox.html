@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+    }
+
+    header, footer {
+      background: #555;
+      color: white;
+      padding: 1em;
+      text-align: left;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+
+    .sidebar {
+      background: #ddd;
+      padding: 1em;
+    }
+
+    .main {
+      padding: 1em;
+    }
+
+    .cards {
+      display: flex;
+      gap: 1em;
+    }
+
+    .card {
+      background: #ccc;
+      padding: 1em;
+      border-radius: 5px;
+      flex: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Header (Grid + Flexbox)
+  </header>
+
+  <div class="container">
+    <div class="sidebar">Sidebar</div>
+    <div class="main">
+      <h2>Flexbox Cards</h2>
+      <div class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Footer
+  </footer>
+
+</body>
+</html>
